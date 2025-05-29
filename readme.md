@@ -8,8 +8,8 @@ PizzaHouse is a simple Laravel-based web application for ordering pizzas. It all
 - Select from multiple pizza types and crust bases
 - Display orders in a list ordered by latest
 - Price calculation based on pizza type
-- Flash message alerts for success
-- Laravel migration system for managing database
+- User authentication
+- Admin panel to manage orders
 
 ## 📦 Requirements
 
@@ -18,3 +18,7 @@ PizzaHouse is a simple Laravel-based web application for ordering pizzas. It all
 - MySQL or MariaDB
 - Node.js & npm (for frontend scaffolding)
 - Laravel 6.x+ (tested with Laravel UI)
+
+## 📄 License
+
+MIT License. Feel free to use and modify.
