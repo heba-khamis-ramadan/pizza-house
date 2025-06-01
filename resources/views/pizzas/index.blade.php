@@ -10,12 +10,4 @@
     </div>
   @endforeach
 </div>
-<div class="flex-center position-ref full-height">
-    <div class="content">
-        <div class="title m-b-md">
-            Pizzas List
-        </div>
-
-    </div>
-</div>
 @endsection

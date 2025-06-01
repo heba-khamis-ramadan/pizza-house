@@ -10,6 +10,18 @@
             <h1>Order for {{ $pizza->name }}</h1>
             <p class="type">Type - {{ $pizza->type }}</p>
             <p class="base">Base - {{ $pizza->base }}</p>
+            <p class="status">Status - {{ $pizza->status }}</p>
+            <form action="/pizzas/{{ $pizza->id }}" method="POST">
+                @csrf
+                @method('PATCH')
+                <label for="status">update order status:</label>
+                <select id="status" name="status">
+                    <option value="pending">pending</option>
+                    <option value="preparing">preparing</option>
+                    <option value="out for delivery">out for delivery</option>
+                </select>
+                <input type="submit" value="update order status" id="update1">
+            </form>
             <form action="/pizzas/{{ $pizza->id }}" method="POST">
                 @csrf
                 @method('DELETE')
@@ -20,3 +32,13 @@
     </div>
 </div>
 @endsection
+
+@push('scripts')
+        <script>
+        $(document).ready(function() {
+            $('#update1').on('click', function() {
+                alert('Pizza order updated successfully!');
+            });
+        });
+    </script>
+@endpush

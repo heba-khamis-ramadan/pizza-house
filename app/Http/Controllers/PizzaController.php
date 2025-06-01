@@ -51,11 +51,20 @@ class PizzaController extends Controller
         return redirect('/')->with('success', 'Pizza order placed successfully!');
     }
 
+    public function update($id) {
+        $pizza = Pizza::findOrfail($id);
+
+        $pizza->status = request('status');
+        $pizza->save();
+
+        return redirect("/pizzas/$id")->with('success', 'Pizza order updated successfully!');
+    }
+
     public function destroy($id) {
         $pizza = Pizza::findOrfail($id);
 
         $pizza->delete();
 
-        return redirect('/pizzas')->with('success', 'Pizza order placed successfully!');
+        return redirect('/pizzas')->with('success', 'Pizza order completed successfully!');
     }
 }

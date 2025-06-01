@@ -9,11 +9,11 @@
         <input type="text" id="name" name="name">
         <label for="type">choose pizza type:</label>
         <select id="type" name="type">
-            <option value="margherita">Margherita</option>
+            <option value="Margherita">Margherita</option>
             <option value="pepperoni">Pepperoni</option>
-            <option value="veggie">Veggie</option>
-            <option value="chicken">BBQ Chicken</option>
-            <option value="cheese">Four Cheese</option>
+            <option value="Pepperoni">Veggie</option>
+            <option value="BBQ Chicken">BBQ Chicken</option>
+            <option value="Four Cheese">Four Cheese</option>
         </select>
         <label for="type">choose pizza base:</label>
         <select id="base" name="base">
