@@ -11,7 +11,8 @@
             <p class="type">Type - {{ $pizza->type }}</p>
             <p class="base">Base - {{ $pizza->base }}</p>
             <p class="status">Status - {{ $pizza->status }}</p>
-            <form action="/pizzas/{{ $pizza->id }}" method="POST">
+            <!-- update order form -->
+            <form action="/pizzas/{{ $pizza->id }}" id="status-update-form">
                 @csrf
                 @method('PATCH')
                 <label for="status">update order status:</label>

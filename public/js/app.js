@@ -49557,8 +49557,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
 
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()('#update1').on('click', function (e) {
-    alert('Pizza order updated successfully!');
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('#status-update-form').submit(function (e) {
+    e.preventDefault();
+    var token = jquery__WEBPACK_IMPORTED_MODULE_0___default()('input[name="_token"]').val();
+    var status = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#status').val();
+    var url = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('action');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default.a.ajax({
+      url: url,
+      type: 'PATCH',
+      data: {
+        _token: token,
+        status: status
+      }
+    }).done(function (response) {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()('.status').text('Status - ' + status);
+      console.log(response.message);
+    }).fail(function (xhr) {
+      console.log(xhr.responseText);
+      console.log(xhr.status);
+    });
   });
 });
 

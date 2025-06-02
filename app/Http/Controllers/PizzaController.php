@@ -57,6 +57,10 @@ class PizzaController extends Controller
         $pizza->status = request('status');
         $pizza->save();
 
+        if (request()->ajax()) {
+        return response()->json(['message' => 'Pizza status updated successfully!']);
+    }
+
         return redirect("/pizzas/$id")->with('success', 'Pizza order updated successfully!');
     }
 
