@@ -5,6 +5,7 @@
  */
 import $ from 'jquery';
 window.$ = window.jQuery = $;
+import './pizza-status';
 
 require('./bootstrap');
 

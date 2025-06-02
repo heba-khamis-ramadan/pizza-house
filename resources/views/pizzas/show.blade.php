@@ -32,13 +32,3 @@
     </div>
 </div>
 @endsection
-
-@push('scripts')
-        <script>
-        $(document).ready(function() {
-            $('#update1').on('click', function() {
-                alert('Pizza order updated successfully!');
-            });
-        });
-    </script>
-@endpush
